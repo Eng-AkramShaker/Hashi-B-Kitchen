@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable, camel_case_types, sized_box_for_whitespace, unused_local_variable, avoid_print, non_constant_identifier_names
 
 import 'package:face_auth_flutter/core/constants/constants.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';

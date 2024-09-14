@@ -1,11 +1,10 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:face_auth_flutter/core/constants/constants.dart';
-import 'package:face_auth_flutter/data/models/end_shift_model.dart';
+import 'package:face_auth_flutter/data/models/shift/end_shift_model.dart';
 import 'package:face_auth_flutter/widgets/divider/divider.dart';
 import 'package:face_auth_flutter/widgets/texts/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 

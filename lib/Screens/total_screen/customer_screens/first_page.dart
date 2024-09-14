@@ -1,9 +1,11 @@
+// ignore_for_file: camel_case_types
+
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:face_auth_flutter/core/constants/constants.dart';
-import 'package:face_auth_flutter/provider/auth/Login.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
-import 'package:face_auth_flutter/provider/shift_provider/shift.dart';
+import 'package:face_auth_flutter/data/provider/auth/Login.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/shift_provider/shift.dart';
 import 'package:face_auth_flutter/widgets/text_filed/text_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

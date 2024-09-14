@@ -1,8 +1,8 @@
 // ignore_for_file: camel_case_types, prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_local_variable, non_constant_identifier_names, sized_box_for_whitespace, avoid_print, avoid_unnecessary_containers, unused_element, must_be_immutable, unnecessary_string_interpolations, prefer_typing_uninitialized_variables, unnecessary_null_comparison, unused_field
 
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
-import 'package:face_auth_flutter/provider/printer_provider/printer_provider.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/printer_provider/printer_provider.dart';
 import 'package:face_auth_flutter/widgets/texts/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

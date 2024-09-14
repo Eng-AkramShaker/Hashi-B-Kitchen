@@ -1,11 +1,11 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:face_auth_flutter/core/constants/navigators.dart';
+import 'package:face_auth_flutter/widgets/show_snack/select_menu.dart';
+import 'package:face_auth_flutter/widgets/text_filed/text_filed.dart';
+import 'package:face_auth_flutter/widgets/texts/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../core/constants/navigators.dart';
-import '../../../widgets/show_snack/select_menu.dart';
-import '../../../widgets/text_filed/text_filed.dart';
-import '../../../widgets/texts/custom_text.dart';
 
 widget_closing_Button({required context, required double width, required number_Controlle, required onPressed}) {
   return Snack_Select_Menu(

@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types
 
-import 'package:face_auth_flutter/data/models/best_seller_model.dart';
+import 'package:face_auth_flutter/data/models/seller/best_seller_model.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 

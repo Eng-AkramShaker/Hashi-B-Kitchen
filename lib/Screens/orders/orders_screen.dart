@@ -1,5 +1,5 @@
-import 'package:face_auth_flutter/provider/orders_provider/orders.dart';
-import 'package:face_auth_flutter/provider/return_invoice/return.dart';
+import 'package:face_auth_flutter/data/provider/orders_provider/orders.dart';
+import 'package:face_auth_flutter/data/provider/return_invoice/return.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'widgets/card_order.dart';

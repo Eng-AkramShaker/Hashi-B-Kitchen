@@ -11,16 +11,19 @@ import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/hive_serial_nu
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/hive_upload_All_invoices.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/user/hive_user.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/user/lock_screen.dart';
-import 'package:face_auth_flutter/provider/auth/Login.dart';
-import 'package:face_auth_flutter/provider/auth/register.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/cost_sharing_provider/cost_sharing.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
-import 'package:face_auth_flutter/provider/orders_provider/orders.dart';
-import 'package:face_auth_flutter/provider/printer_provider/printer_provider.dart';
-import 'package:face_auth_flutter/provider/return_invoice/return.dart';
-import 'package:face_auth_flutter/provider/shift_provider/shift.dart';
-import 'package:face_auth_flutter/provider/upload_All_invoices/upload_All_invoices.dart';
+import 'package:face_auth_flutter/data/provider/auth/register.dart';
+import 'package:face_auth_flutter/data/provider/kitchen/kitchen_provider.dart';
+import 'package:face_auth_flutter/data/provider/return_invoice/return.dart';
+
+import 'package:face_auth_flutter/data/provider/shift_provider/shift.dart';
+import 'package:face_auth_flutter/data/provider/auth/Login.dart';
+
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/cost_sharing_provider/cost_sharing.dart';
+import 'package:face_auth_flutter/data/provider/orders_provider/orders.dart';
+import 'package:face_auth_flutter/data/provider/printer_provider/printer_provider.dart';
+import 'package:face_auth_flutter/data/provider/upload_All_invoices/upload_All_invoices.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
@@ -53,5 +56,8 @@ final List<SingleChildWidget> providers = [
   // Hive  Upload All invoices  --------------------------------------------------------
   ChangeNotifierProvider(create: (ctx) => Hive_Upload_All_invoices()),
   ChangeNotifierProvider(create: (ctx) => Upload_All_invoices_Provider()),
+
   //
+
+  ChangeNotifierProvider(create: (ctx) => Kitchen_Provider()),
 ];

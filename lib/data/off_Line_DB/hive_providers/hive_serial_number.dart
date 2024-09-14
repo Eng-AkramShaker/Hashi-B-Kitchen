@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:face_auth_flutter/data/models/serial_number_model.dart'; // Adjust the import path
+import 'package:face_auth_flutter/data/models/serial/serial_number_model.dart'; // Adjust the import path
 
 class Hive_Serial_Number_Provider with ChangeNotifier {
   final myBox = Hive.box('serialnumber');

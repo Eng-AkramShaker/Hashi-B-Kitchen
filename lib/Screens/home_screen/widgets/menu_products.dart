@@ -1,14 +1,14 @@
 // ignore_for_file: non_constant_identifier_names, unnecessary_string_interpolations, avoid_print, unused_local_variable
 
-import 'package:face_auth_flutter/provider/auth/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
 import '../../../core/constants/config.dart';
 import '../../../widgets/cards/costume_card.dart';
-import '../../../data/models/group_product _model.dart';
+import '../../../data/models/product/group_product _model.dart';
 import '../../../widgets/show_snack/Snack_Bar.dart';
+import 'package:face_auth_flutter/data/provider/auth/Login.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
 
 Widget Menu_Products({required context, required Categories_Provider provCategory, required List<Item> items}) {
   var size = MediaQuery.of(context).size;
@@ -40,22 +40,6 @@ Widget Menu_Products({required context, required Categories_Provider provCategor
                       if (stock_qty == 0) {
                         Snak_Bar(context, "نفذ الكمية ");
                       } else if (stock_qty > 0) {
-                        // if (provCategory.number == 1 && price != provCategory.Menu_total) {
-                        //   price *= provCategory.number;
-                        //   if (stock_qty >= provCategory.number) {
-                        //     provCategory.model_items[provCategory.selectedCategory]![index].stock_qty =
-                        //         (stock_qty - provCategory.number).toString();
-                        //     // print(stock_qty);
-                        //   }
-                        //   //
-                        // } else if (provCategory.number > 1 && price != provCategory.Menu_total) {
-                        //   price *= provCategory.number;
-                        //   if (stock_qty >= provCategory.number) {
-                        //     provCategory.model_items[provCategory.selectedCategory]![index].stock_qty =
-                        //         (stock_qty - provCategory.number).toString();
-                        //   }
-                        // }
-
                         await pro_Invoice.add_One_item_To_Sales_Invoice(
                           name: name,
                           qty: provCategory.number,

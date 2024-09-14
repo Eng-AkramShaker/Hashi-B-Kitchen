@@ -1,11 +1,11 @@
 // ignore_for_file: avoid_print, camel_case_types, must_be_immutable, unused_local_variable
 
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../core/constants/constants.dart';
+import '../../data/provider/invoice_provider/invoice.dart';
 
 class CustomDrop extends StatefulWidget {
   const CustomDrop({super.key, required this.items});
@@ -22,7 +22,7 @@ class _CustomDropState extends State<CustomDrop> {
   Widget build(BuildContext context) {
     return Consumer<Invoice_Provider>(
       builder: (context, proInvoice, child) {
-        selectedValue = proInvoice.nameCustomer;
+        selectedValue = proInvoice.nameCustomer ?? 'Cash Customer';
 
         return Center(
           child: DropdownButtonHideUnderline(
@@ -33,10 +33,9 @@ class _CustomDropState extends State<CustomDrop> {
                 children: [
                   Expanded(
                     child: Text(
-                      proInvoice.nameCustomer!,
+                      selectedValue!,
                       style: TextStyle(
                         fontSize: 11.sp,
-                        // fontWeight: FontWeight.bold,
                         color: wtColor,
                       ),
                       overflow: TextOverflow.ellipsis,
@@ -53,7 +52,6 @@ class _CustomDropState extends State<CustomDrop> {
                       item.name.toString(),
                       style: TextStyle(
                         fontSize: 11.sp,
-                        // fontWeight: FontWeight.bold,
                         color: const Color.fromARGB(216, 255, 255, 255),
                       ),
                       overflow: TextOverflow.ellipsis,
@@ -66,7 +64,7 @@ class _CustomDropState extends State<CustomDrop> {
               onChanged: (String? value) {
                 setState(() {
                   selectedValue = value;
-                  proInvoice.nameCustomer = value!;
+                  proInvoice.nameCustomer = value!; // Update the provider state
                 });
 
                 print(selectedValue);
@@ -89,7 +87,6 @@ class _CustomDropState extends State<CustomDrop> {
               ),
               dropdownStyleData: DropdownStyleData(
                 maxHeight: 40.h,
-                // width: 18.w,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(.5.w),
                   color: brown_Color,
@@ -103,7 +100,6 @@ class _CustomDropState extends State<CustomDrop> {
               ),
               menuItemStyleData: const MenuItemStyleData(
                 height: 30,
-                // padding: EdgeInsets.only(left: 1.5.w, right: 1.5.w),
               ),
             ),
           ),

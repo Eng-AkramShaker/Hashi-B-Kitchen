@@ -28,9 +28,15 @@ class CategoryButton extends StatelessWidget {
           children: [
             custom_img_Network(img, h: 40, w: 40),
             const SizedBox(height: 5),
-            Text(title,
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Theme.of(context).colorScheme.primary, fontSize: 10.sp, fontWeight: FontWeight.bold)),
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.primary,
+                fontSize: 10.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),

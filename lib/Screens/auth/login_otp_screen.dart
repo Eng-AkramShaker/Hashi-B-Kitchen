@@ -4,17 +4,17 @@ import 'package:face_auth_flutter/Screens/auth/widget/custom_textField.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/user/hive_user.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/user/lock_screen.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/initialized_Hive/int_Hive.dart';
-import 'package:face_auth_flutter/provider/auth/Login.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/auth/Login.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
 import 'package:face_auth_flutter/widgets/Buttons/custom_button.dart';
 import 'package:face_auth_flutter/widgets/show_snack/select_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../core/constants/constants.dart';
-import '../../../core/constants/navigators.dart';
-import '../../../widgets/texts/custom_text.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/constants/navigators.dart';
+import '../../../../widgets/texts/custom_text.dart';
 
 class Login_OTP_Screen extends StatefulWidget {
   const Login_OTP_Screen({super.key});
@@ -181,8 +181,8 @@ class _Login_OTP_ScreenState extends State<Login_OTP_Screen> {
         // lock_Screen_Hive.delete_Lock_Screen();
 
         // setState(() {
-        //   pro_Login.email.text = 'Administrator';
-        //   pro_Login.pass.text = 'JT8r!HKmJX9D';
+        //   proLogin.email.text = 'Administrator';
+        //   proLogin.pass.text = 'JT8r!HKmJX9D';
         // });
 
         proLogin.Login(context, userHiveProvider, proLogin, lockScreenHiveProvider, proLogin.email.text, proLogin.pass.text);

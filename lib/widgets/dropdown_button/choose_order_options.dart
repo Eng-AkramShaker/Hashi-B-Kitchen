@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print, camel_case_types, must_be_immutable, unused_local_variable
 
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:face_auth_flutter/data/models/order_options_model.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/models/orders/order_options_model.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -23,7 +23,8 @@ class _CustomDropState extends State<Choose_Order_Options> {
   Widget build(BuildContext context) {
     return Consumer<Invoice_Provider>(
       builder: (context, proInvoice, child) {
-        selectedValue = proInvoice.name_Type_Payment;
+        selectedValue = proInvoice.name_Order_Options;
+
         return Center(
           child: DropdownButtonHideUnderline(
             child: DropdownButton2<String>(
@@ -33,7 +34,7 @@ class _CustomDropState extends State<Choose_Order_Options> {
                 children: [
                   Expanded(
                     child: Text(
-                      proInvoice.name_Order_Options,
+                      selectedValue ?? 'Select an Option',
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
@@ -50,7 +51,7 @@ class _CustomDropState extends State<Choose_Order_Options> {
                   value: item.name,
                   child: Center(
                     child: Text(
-                      item.name ?? 'No Name',
+                      item.name!,
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
@@ -66,10 +67,9 @@ class _CustomDropState extends State<Choose_Order_Options> {
               onChanged: (String? value) {
                 setState(() {
                   selectedValue = value;
-                  proInvoice.name_Order_Options = value!;
+                  proInvoice.name_Order_Options = value ?? ''; // Handle null safely
                 });
 
-                // Debug print to trace new selected value
                 print('New selected value: $selectedValue');
               },
               buttonStyleData: ButtonStyleData(

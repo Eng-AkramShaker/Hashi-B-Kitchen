@@ -1,10 +1,10 @@
 // ignore_for_file: must_be_immutable, camel_case_types, avoid_print
 
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
 import '../../core/constants/constants.dart';
 
 class Custom_Select_Button extends StatefulWidget {

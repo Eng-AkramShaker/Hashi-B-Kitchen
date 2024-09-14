@@ -1,22 +1,19 @@
-// ignore_for_file: avoid_print
-
-import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:face_auth_flutter/data/models/serial_number_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
 import '../../core/constants/constants.dart';
+import '../../data/models/serial/serial_number_model.dart';
+import '../../data/provider/invoice_provider/invoice.dart';
 
 class Return_Invoice extends StatefulWidget {
   const Return_Invoice({super.key, required this.items});
   final List<Datum> items;
 
   @override
-  State<Return_Invoice> createState() => _Return_InvoiceState();
+  State<Return_Invoice> createState() => _ReturnInvoiceState();
 }
 
-class _Return_InvoiceState extends State<Return_Invoice> {
+class _ReturnInvoiceState extends State<Return_Invoice> {
   String? selectedValue;
 
   @override
@@ -31,7 +28,7 @@ class _Return_InvoiceState extends State<Return_Invoice> {
 
         return Center(
           child: DropdownButtonHideUnderline(
-            child: DropdownButton2<String>(
+            child: DropdownButton<String>(
               isExpanded: true,
               hint: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -76,40 +73,20 @@ class _Return_InvoiceState extends State<Return_Invoice> {
 
                 print(selectedValue);
               },
-              buttonStyleData: ButtonStyleData(
-                height: 6.h,
-                width: 20.w,
-                padding: EdgeInsets.only(left: 1.5.w, right: 1.5.w),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(.5.w),
-                  border: Border.all(color: const Color.fromARGB(216, 255, 255, 255)),
-                  color: brown_Color,
-                ),
-                elevation: 2,
+              style: TextStyle(
+                fontSize: 12.sp,
+                fontWeight: FontWeight.bold,
+                color: const Color.fromARGB(216, 255, 255, 255),
               ),
-              iconStyleData: IconStyleData(
-                icon: const Icon(Icons.keyboard_arrow_down),
-                iconSize: 14.sp,
-                iconEnabledColor: const Color.fromARGB(216, 255, 255, 255),
+              dropdownColor: brown_Color,
+              icon: Icon(
+                Icons.keyboard_arrow_down,
+                size: 14.sp,
+                color: const Color.fromARGB(216, 255, 255, 255),
               ),
-              dropdownStyleData: DropdownStyleData(
-                maxHeight: 50.h,
-                width: 20.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(.5.w),
-                  color: brown_Color,
-                ),
-                offset: const Offset(0, 0),
-                scrollbarTheme: ScrollbarThemeData(
-                  radius: const Radius.circular(40),
-                  thickness: MaterialStateProperty.all<double>(6),
-                  thumbVisibility: MaterialStateProperty.all<bool>(true),
-                ),
-              ),
-              menuItemStyleData: MenuItemStyleData(
-                height: 50,
-                padding: EdgeInsets.only(left: 1.5.w, right: 1.5.w),
-              ),
+              itemHeight: 48.0,
+              elevation: 2,
+              borderRadius: BorderRadius.circular(.5.w),
             ),
           ),
         );

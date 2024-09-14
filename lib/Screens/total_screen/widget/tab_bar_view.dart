@@ -2,12 +2,14 @@
 
 import 'package:face_auth_flutter/Screens/total_screen/customer_screens/first_page.dart';
 import 'package:face_auth_flutter/Screens/total_screen/customer_screens/second_page.dart';
-import 'package:face_auth_flutter/provider/auth/Login.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
-import 'package:face_auth_flutter/provider/shift_provider/shift.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'package:face_auth_flutter/data/provider/auth/Login.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/shift_provider/shift.dart';
 
 class TabBarView_Customer extends StatefulWidget {
   const TabBarView_Customer({super.key});

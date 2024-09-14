@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, unused_local_variable, camel_case_types, unrelated_type_equality_checks, avoid_print
 
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/hive_upload_All_invoices.dart';
-import 'package:face_auth_flutter/provider/upload_All_invoices/upload_All_invoices.dart';
+import 'package:face_auth_flutter/data/provider/upload_All_invoices/upload_All_invoices.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:provider/provider.dart';

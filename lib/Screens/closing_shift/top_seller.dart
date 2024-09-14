@@ -4,13 +4,13 @@ import 'package:face_auth_flutter/Screens/closing_shift/end_day.dart';
 import 'package:face_auth_flutter/core/constants/check_interner.dart';
 import 'package:face_auth_flutter/core/constants/constants.dart';
 import 'package:face_auth_flutter/core/constants/navigators.dart';
-import 'package:face_auth_flutter/data/models/best_seller_model.dart';
-import 'package:face_auth_flutter/provider/shift_provider/shift.dart';
+import 'package:face_auth_flutter/data/models/seller/best_seller_model.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/shift_provider/shift.dart';
 import 'package:face_auth_flutter/widgets/texts/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class Top_Seller_Screen extends StatefulWidget {
@@ -43,7 +43,7 @@ class _ClosingShiftState extends State<Top_Seller_Screen> {
         backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.onBackground,
-          title: check_internet(),
+          title: const check_internet(),
         ),
         body: SingleChildScrollView(
           child: Padding(

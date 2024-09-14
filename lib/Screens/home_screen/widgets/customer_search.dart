@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, sized_box_for_whitespace, unnecessary_null_comparison, camel_case_types, non_constant_identifier_names, unused_local_variable, avoid_print
 
 import 'package:face_auth_flutter/core/constants/constants.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
 import '../../../core/constants/navigators.dart';
 
 class Search_Customer extends StatefulWidget {
@@ -53,7 +53,7 @@ class _new_searchState extends State<Search_Customer> {
                   onTap: () {
                     //
                     setState(() {
-                      pro_Invoice.nameCustomer = customers.name.toString();
+                      pro_Invoice.nameCustomer = customers['customer_name'].toString();
                     });
                     print(customers['customer_name']);
                     pop(context);

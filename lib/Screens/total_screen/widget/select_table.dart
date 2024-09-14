@@ -1,6 +1,6 @@
 // ignore_for_file: camel_case_types
 
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,12 +16,12 @@ class _SelectState extends State<Select_Tablet> {
   Widget build(BuildContext context) {
     return Consumer<Invoice_Provider>(builder: (context, proInvoice, child) {
       return Padding(
-        padding: const EdgeInsets.all(8.0), // مساحة خارجية حول الـ GridView
+        padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3, // عدد الأعمدة
-            crossAxisSpacing: 10, // المسافة بين الأعمدة
-            mainAxisSpacing: 30, // المسافة بين الصفوف
+            crossAxisCount: 3,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 30,
           ),
           itemCount: 5,
           itemBuilder: (context, index) {

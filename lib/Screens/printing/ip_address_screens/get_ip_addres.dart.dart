@@ -1,11 +1,12 @@
 // ignore_for_file: camel_case_types, unused_local_variable, non_constant_identifier_names, avoid_print
 
 import 'package:face_auth_flutter/core/constants/navigators.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
-import 'package:face_auth_flutter/provider/printer_provider/printer_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/printer_provider/printer_provider.dart';
 
 class Get_ip_address extends StatefulWidget {
   const Get_ip_address({super.key});
@@ -29,6 +30,7 @@ class _Get_ip_addressState extends State<Get_ip_address> {
               width: size.width,
               child: ListView.builder(
                 shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: provPrinter.Show_IP_Address!.message.length,
                 itemBuilder: (BuildContext context, int index) {
                   final ip_adders = provPrinter.Show_IP_Address!.message[index];

@@ -4,9 +4,10 @@ import 'package:face_auth_flutter/Screens/printing/Small_print.dart';
 import 'package:face_auth_flutter/Screens/printing/widgets/qr.dart';
 import 'package:face_auth_flutter/Screens/printing/widgets/row_tex.dart';
 import 'package:face_auth_flutter/core/constants/navigators.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
-import 'package:face_auth_flutter/provider/printer_provider/printer_provider.dart';
+
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/printer_provider/printer_provider.dart';
 import 'package:face_auth_flutter/widgets/divider/divider.dart';
 import 'package:face_auth_flutter/widgets/images/custom_image.dart';
 import 'package:face_auth_flutter/widgets/texts/custom_text.dart';

@@ -1,14 +1,15 @@
 // ignore_for_file: camel_case_types, avoid_print, non_constant_identifier_names, prefer_const_constructors
 
 import 'package:face_auth_flutter/Screens/auth/login_otp_screen.dart';
-import 'package:face_auth_flutter/Screens/closing_shift/widgets/closing_button.dart';
 import 'package:face_auth_flutter/Screens/closing_shift/widgets/print_Day_Sheet.dart';
+import 'package:face_auth_flutter/Screens/closing_shift/widgets/closing_button.dart';
 import 'package:face_auth_flutter/core/constants/check_interner.dart';
 import 'package:face_auth_flutter/core/constants/constants.dart';
 import 'package:face_auth_flutter/core/constants/navigators.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/hive_open_shift.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/initialized_Hive/int_Hive.dart';
-import 'package:face_auth_flutter/provider/shift_provider/shift.dart';
+import 'package:face_auth_flutter/data/provider/categories_provider/categories.dart';
+import 'package:face_auth_flutter/data/provider/shift_provider/shift.dart';
 import 'package:face_auth_flutter/widgets/Buttons/custom_button.dart';
 import 'package:face_auth_flutter/widgets/show_snack/Snack_Bar.dart';
 import 'package:face_auth_flutter/widgets/show_snack/select_menu.dart';
@@ -16,7 +17,6 @@ import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:face_auth_flutter/provider/categories_provider/categories.dart';
 
 class End_Day_Screen extends StatefulWidget {
   const End_Day_Screen({super.key});

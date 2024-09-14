@@ -32,7 +32,9 @@ dependencies:
   path_provider:
   responsive_sizer:
   animated_search_bar:
-  dropdown_button2:
+
+  dropdown_button2: ^2.3.9
+
   custom_radio_grouped_button:
   http:
   intl:

@@ -12,8 +12,8 @@ import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/hive_serial_nu
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/hive_upload_All_invoices.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/user/hive_user.dart';
 import 'package:face_auth_flutter/data/off_Line_DB/hive_providers/user/lock_screen.dart';
-import 'package:face_auth_flutter/provider/auth/Login.dart';
-import 'package:face_auth_flutter/provider/upload_All_invoices/upload_All_invoices.dart';
+import 'package:face_auth_flutter/data/provider/auth/Login.dart';
+import 'package:face_auth_flutter/data/provider/upload_All_invoices/upload_All_invoices.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 

@@ -1,13 +1,12 @@
 // ignore_for_file: avoid_print, camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:face_auth_flutter/provider/cost_sharing_provider/cost_sharing.dart';
+import 'package:face_auth_flutter/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-
-import '../../../core/constants/constants.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/cost_sharing_provider/cost_sharing.dart';
 
 class MyDropdown extends StatefulWidget {
   final onChanged;

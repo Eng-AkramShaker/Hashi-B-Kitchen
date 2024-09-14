@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:face_auth_flutter/Screens/home_screen/widgets/customer_search.dart';
 import 'package:flutter/material.dart';
 

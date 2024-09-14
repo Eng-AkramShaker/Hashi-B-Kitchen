@@ -1,28 +1,31 @@
 // ignore_for_file: avoid_print, camel_case_types, must_be_immutable, unused_local_variable
 
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:face_auth_flutter/provider/invoice_provider/invoice.dart';
+import 'package:face_auth_flutter/data/provider/invoice_provider/invoice.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../core/constants/constants.dart';
+// ignore_for_file: avoid_print, camel_case_types, must_be_immutable, unused_local_variable
 
 class Choose_Payment extends StatefulWidget {
   const Choose_Payment({super.key, required this.items});
   final List<dynamic> items;
 
   @override
-  State<Choose_Payment> createState() => _CustomDropState();
+  State<Choose_Payment> createState() => _Choose_PaymentState();
 }
 
-class _CustomDropState extends State<Choose_Payment> {
+class _Choose_PaymentState extends State<Choose_Payment> {
   String? selectedValue;
 
   @override
   Widget build(BuildContext context) {
     return Consumer<Invoice_Provider>(
       builder: (context, proInvoice, child) {
+        selectedValue = proInvoice.name_Type_Payment;
+
         return Center(
           child: DropdownButtonHideUnderline(
             child: DropdownButton2<String>(
@@ -32,7 +35,7 @@ class _CustomDropState extends State<Choose_Payment> {
                 children: [
                   Expanded(
                     child: Text(
-                      proInvoice.name_Type_Payment,
+                      selectedValue ?? 'Select Payment Type', // Handle null value
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
@@ -45,11 +48,12 @@ class _CustomDropState extends State<Choose_Payment> {
                 ],
               ),
               items: widget.items.map<DropdownMenuItem<String>>((dynamic item) {
+                final itemName = item.name?.toString() ?? 'No Name'; // Ensure safe handling
                 return DropdownMenuItem<String>(
-                  value: item.name.toString(),
+                  value: itemName,
                   child: Center(
                     child: Text(
-                      item.name.toString(),
+                      itemName,
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
@@ -61,19 +65,19 @@ class _CustomDropState extends State<Choose_Payment> {
                   ),
                 );
               }).toList(),
-              value: proInvoice.name_Type_Payment,
+              value: selectedValue,
               onChanged: (String? value) {
                 setState(() {
                   selectedValue = value;
-                  proInvoice.name_Type_Payment = value!;
+                  proInvoice.name_Type_Payment = value ?? ''; // Handle null value
                 });
 
-                print(selectedValue);
+                print('Selected value: $selectedValue');
               },
               buttonStyleData: ButtonStyleData(
                 height: 6.h,
                 width: 20.w,
-                padding: EdgeInsets.only(left: 1.5.w, right: 1.5.w),
+                padding: EdgeInsets.symmetric(horizontal: 1.5.w),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(.5.w),
                   border: Border.all(color: const Color.fromARGB(216, 255, 255, 255)),
@@ -102,7 +106,7 @@ class _CustomDropState extends State<Choose_Payment> {
               ),
               menuItemStyleData: MenuItemStyleData(
                 height: 50,
-                padding: EdgeInsets.only(left: 1.5.w, right: 1.5.w),
+                padding: EdgeInsets.symmetric(horizontal: 1.5.w),
               ),
             ),
           ),
@@ -140,7 +144,7 @@ class _Choose_Payment_MedaState extends State<Choose_Payment_Meda> {
                 children: [
                   Expanded(
                     child: Text(
-                      proInvoice.Type_Payment_Meda,
+                      proInvoice.Type_Payment_Meda ?? 'اختر وسيلة الدفع', // قيمة افتراضية لتفادي الأخطاء
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
@@ -153,11 +157,12 @@ class _Choose_Payment_MedaState extends State<Choose_Payment_Meda> {
                 ],
               ),
               items: widget.items.map<DropdownMenuItem<String>>((dynamic item) {
+                final itemName = item.name?.toString() ?? 'لا اسم'; // التعامل مع القيم null
                 return DropdownMenuItem<String>(
-                  value: item.name.toString(),
+                  value: itemName,
                   child: Center(
                     child: Text(
-                      item.name.toString(),
+                      itemName,
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
@@ -169,11 +174,11 @@ class _Choose_Payment_MedaState extends State<Choose_Payment_Meda> {
                   ),
                 );
               }).toList(),
-              value: proInvoice.Type_Payment_Meda,
+              value: selectedValue,
               onChanged: (String? value) {
                 setState(() {
                   selectedValue = value;
-                  proInvoice.Type_Payment_Meda = value!;
+                  proInvoice.Type_Payment_Meda = value ?? ''; // تعيين قيمة افتراضية لتفادي الأخطاء
                 });
 
                 print(selectedValue);
